@@ -7,9 +7,8 @@ const useFetch = (url) => {
 
     useEffect(() => {
         const fetchingData = async() => {
-            const fetching = await fetch(url).then( r => r.json()).then( j => setData(j)).then( f => setIsFetching(true));
+             await fetch(url).then( r => r.json()).then( j => setData(j)).then( f => setIsFetching(true));
         }
-        console.log("useFetch", "renders: ");
         fetchingData();
     }, [url, isFetching])
 

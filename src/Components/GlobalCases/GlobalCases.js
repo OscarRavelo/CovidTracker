@@ -7,7 +7,7 @@ const state = useContext(StateContext);
     
         <div>
           <h1>global cases</h1>
-          <p>{state.confirmed.value}</p>
+          <p>{state.data.confirmed}</p>
         </div>
       
     </div>

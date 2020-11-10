@@ -4,14 +4,14 @@ import './CasesByCountry.css';
 
 
 const CaseByCountry = () => {
-  const {data, isFetching} =  useFetch("https://covid19.mathdro.id/api/confirmed");
+  const {data, isFetching} =  useFetch("https://covid2019-api.herokuapp.com/v2/current");
     return(<div className="CasesByCountry">
         <h1>Confirmed Cases by Country/Region</h1>
         {
             isFetching ? (<div>
                 <ul>
 
-                {data.map( d => (<li key={d.combinedKey}>{d.confirmed} confirmed <br/> {d.combinedKey}</li>))}
+                {data.data.map( d => (<li key={d.location}>{d.confirmed} confirmed {d.location}</li>))}
                 </ul>
             </div>) : (<div>...loading</div>)
         }
