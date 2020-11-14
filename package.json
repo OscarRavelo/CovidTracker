@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/OscarRavelo/CovidTracker",
   "name": "covidtrack",
+  "homepage": "https://github.com/OscarRavelo/CovidTracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
