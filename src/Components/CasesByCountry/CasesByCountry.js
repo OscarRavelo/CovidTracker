@@ -1,6 +1,9 @@
 import React from 'react';
+import { FormattedNumber } from 'react-intl';
 import useFetch from '../../Hooks/useFetch';
+import Loader from '../Loading/Loading';
 import './CasesByCountry.css';
+
 
 
 const CaseByCountry = () => {
@@ -11,9 +14,9 @@ const CaseByCountry = () => {
             isFetching ? (<div>
                 <ul>
 
-                {data.data.map( d => (<li key={d.location}>{d.confirmed} confirmed {d.location}</li>))}
+                {data.data.map( d => (<li key={d.location}><FormattedNumber value={d.confirmed} /> confirmed {d.location}</li>))}
                 </ul>
-            </div>) : (<div>...loading</div>)
+            </div>) : (<Loader />)
         }
     </div>)
 }

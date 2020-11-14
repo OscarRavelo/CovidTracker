@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from '../../Hooks/useFetch';
+import Loader from '../Loading/Loading';
 
 const Countries = () => {
   const {data, isFetching} =   useFetch("https://covid2019-api.herokuapp.com/countries")
@@ -9,7 +10,7 @@ const Countries = () => {
             
             isFetching ? (<div>
                 <p>{data.countries.length}</p>
-            </div>) : (<div>...loading</div>)
+            </div>) : (<Loader />)
         }
     </div>);
 }

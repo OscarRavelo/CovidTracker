@@ -2,6 +2,8 @@ import React, { useContext,  useState } from "react";
 import useFetch from "../../Hooks/useFetch";
 import StateContext from "../../Hooks/useContext";
 import './GlobalDeaths.css';
+import Loader from  '../Loading/Loading';
+import { FormattedNumber } from "react-intl";
 const GlobalDeaths = () => {
   const state = useContext(StateContext);
   const [question, setQuestion] = useState("deaths");
@@ -14,14 +16,14 @@ const GlobalDeaths = () => {
     <div>
 
     <div className="GlobalScore" >
-      <h1> global {question} </h1> <p>{state.data[question]}</p>
+      <h1> global {question} </h1> <FormattedNumber value={state.data[question]} />
       <ul>
 
       {
         isFetching ? 
         data.data.map( d => {
-            return (<li key={d.location}>{d[question]} {question} {d.location}</li>) 
-        }) : (<div>...loading</div>)
+            return (<li key={d.location}><FormattedNumber value={d[question]} /> {question} {d.location}</li>) 
+        }) : (<Loader />)
       }
       </ul>
       <div>
