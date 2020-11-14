@@ -11,10 +11,12 @@ const Graph = () => {
     const header = data.data.map((r) => {
         return {
           ...r[Object.keys(r)[0]],
+          
           name: Object.getOwnPropertyNames(r)[0],
         };
 
     });
+    console.log(header[0]);
     return header;
 
   }
