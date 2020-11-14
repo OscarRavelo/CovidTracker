@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import StateContext from '../../Hooks/useContext';
-import { FormattedNumber, IntlProvider} from 'react-intl'
+import { FormattedNumber} from 'react-intl'
 const GlobalCase = () => {
 const state = useContext(StateContext);
   return (
