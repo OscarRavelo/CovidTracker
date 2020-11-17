@@ -8,21 +8,22 @@ const GlobalDeaths = () => {
   const state = useContext(StateContext);
   const [question, setQuestion] = useState("deaths");
   const {data, isFetching} = useFetch("https://covid2019-api.herokuapp.com/v2/current");
-  console.log("globalDeaths", isFetching);
 
  
 
   return (
-    <div>
-
-    <div className="GlobalScore" >
-      <h1> global {question} </h1> <FormattedNumber value={state.data[question]} />
+    <div className="container GlobalScore">
+    
+    <div className={` GlobalScore-data ${question}`} >
+      <h1> global {question} </h1> <h2>
+      <FormattedNumber value={state.data[question]} />
+      </h2>
       <ul>
 
       {
         isFetching ? 
         data.data.map( d => {
-            return (<li key={d.location}><FormattedNumber value={d[question]} /> {question} {d.location}</li>) 
+            return (<li key={d.location}><FormattedNumber value={d[question]} /> <strong>{question}</strong> {d.location}</li>) 
         }) : (<Loader />)
       }
       </ul>

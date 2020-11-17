@@ -1,10 +1,11 @@
 import React from 'react';
 import useFetch from '../../Hooks/useFetch';
 import Loader from '../Loading/Loading';
+import './Countries.css';
 
 const Countries = () => {
   const {data, isFetching} =   useFetch("https://covid2019-api.herokuapp.com/countries")
-    return(<div>
+    return(<div className="container contries">
         <h1>Countries/Regions</h1>
         {
             

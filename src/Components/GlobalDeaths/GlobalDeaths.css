@@ -1,6 +1,32 @@
 .GlobalScore {
-    width: 250px;
+    width: 300px;
+    height: 330px;
+    border-radius: 5%;
+}
+.GlobalScore-data {
+    width: 300px;
     height: 300px;
     overflow-x: hidden; 
      overflow-y: auto; 
+}
+
+
+
+ .deaths h2 {
+    color: darkred;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.recovered h2 {
+    color: darkgreen;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.deaths strong {
+    color: darkred;
+}
+.recovered strong {
+    color: darkgreen;
 }

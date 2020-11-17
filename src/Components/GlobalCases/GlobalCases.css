@@ -1,0 +1,12 @@
+.GlobalCases-style {
+    width: 200px;
+    height: 100px;
+    border-radius: 5%;
+}
+
+.GlobalCases-style p {
+    color: darkred;
+    font-weight: 700;
+    font-size: 2rem;
+    
+}

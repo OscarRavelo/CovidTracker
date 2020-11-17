@@ -8,8 +8,8 @@
 }
 
 .leaflet-container {
-  width: 50vw;
-	height: 50vh;
+  width: 600px;
+	height: 600px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -39,4 +39,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.App-gridcontainer {
+  display: grid;
+  grid-template-columns: 1fr  1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.container {
+  background-color: gray;
 }

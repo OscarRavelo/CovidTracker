@@ -19,15 +19,15 @@ function App() {
       <Header />
       
       {isFetching ? (
-        <div>
-        <MapView  />
-            <Graph />
+        <div className="App-gridcontainer">
           <StateContext.Provider value={data}>
             <GlobalCase />
+        <MapView  />
             <GlobalDeaths />
           </StateContext.Provider>
           <CaseByCountry />
           <Countries />
+            <Graph />
         </div>
       ) : (
         <Loader />
