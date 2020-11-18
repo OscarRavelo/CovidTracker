@@ -1,10 +1,9 @@
 .GlobalScore {
-    width: 300px;
-    height: 330px;
+    
     border-radius: 5%;
 }
 .GlobalScore-data {
-    width: 300px;
+    
     height: 300px;
     overflow-x: hidden; 
      overflow-y: auto; 

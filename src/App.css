@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -8,7 +9,7 @@
 }
 
 .leaflet-container {
-  width: 600px;
+  
 	height: 600px;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -44,11 +45,11 @@
 
 .App-gridcontainer {
   display: grid;
-  grid-template-columns: 1fr  1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: auto;
-  justify-content: center;
 }
 
 .container {
   background-color: gray;
 }
+

@@ -10,6 +10,7 @@ import Graph from "./Components/Graph/Graph";
 import Loader from "./Components/Loading/Loading";
 import {  IntlProvider} from 'react-intl'
 import MapView from "./Components/Map/MapView";
+import Position from "./Components/Position/Position";
 function App() {
   const { data, isFetching } = useFetch("https://covid2019-api.herokuapp.com/v2/total");
 
@@ -19,16 +20,16 @@ function App() {
       <Header />
       
       {isFetching ? (
-        <div className="App-gridcontainer">
           <StateContext.Provider value={data}>
-            <GlobalCase />
+        <div className="App-gridcontainer">
         <MapView  />
+            <GlobalCase />
             <GlobalDeaths />
-          </StateContext.Provider>
           <CaseByCountry />
           <Countries />
             <Graph />
         </div>
+          </StateContext.Provider>
       ) : (
         <Loader />
       )}
