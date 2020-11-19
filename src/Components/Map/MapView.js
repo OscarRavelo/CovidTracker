@@ -5,9 +5,9 @@ import MapCases from './MapCases';
 
 const MapView = () => {
     return (
-        <div  >
+        <div className="map_grid_container"  >
 
-        <MapContainer center={{lat: "61.477065", lng: "21.791781"}} zoom={1} scrollWheelZoom={false}  >
+        <MapContainer center={{lat: "61.477065", lng: "21.791781"}} zoom={3} scrollWheelZoom={false}  >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

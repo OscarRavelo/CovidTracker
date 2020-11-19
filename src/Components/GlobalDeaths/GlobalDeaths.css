@@ -1,6 +1,7 @@
 .GlobalScore {
     
     border-radius: 5%;
+    grid-row: span 3 / auto;
 }
 .GlobalScore-data {
     

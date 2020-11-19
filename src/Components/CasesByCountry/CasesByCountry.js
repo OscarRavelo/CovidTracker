@@ -8,7 +8,7 @@ import './CasesByCountry.css';
 
 const CaseByCountry = () => {
   const {data, isFetching} =  useFetch("https://covid2019-api.herokuapp.com/v2/current");
-    return(<div className="CasesByCountry container">
+    return(<div className="CasesByCountry container ">
         <h1>Confirmed Cases by Country/Region</h1>
         {
             isFetching ? (<div>

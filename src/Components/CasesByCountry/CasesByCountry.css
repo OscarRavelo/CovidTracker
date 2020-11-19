@@ -1,6 +1,11 @@
-.CasesByCountry {
+.CasesByCountry-container {
     
-    height: 300px;
+}
+
+
+.CasesByCountry {
+    grid-row: span 3 / auto;
+    border-radius: 5%;
     overflow-x: hidden;
     overflow-y: auto;
 }

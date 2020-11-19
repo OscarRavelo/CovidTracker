@@ -16,19 +16,18 @@ const Graph = () => {
         };
 
     });
-    console.log(header[0]);
     return header;
 
   }
 
  
   return (
-    <div>
+    <div className="graph-container">
       {isFetching ? (
-        <div>
+        <div >
 
         <BarChart
-        width={700}
+        width={1200}
         height={300}
         data={dataGrap()}
         margin={{
