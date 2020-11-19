@@ -52,7 +52,7 @@ background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, F
 .App-gridcontainer {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 100px;
 }
 
@@ -73,4 +73,17 @@ background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, F
   grid-column: span 2 /auto;
 
   
+}
+
+@media (min-width: 900px){
+  .graph-container {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .map_grid_container {
+    grid-row: span 4 / auto;
+    grid-column: auto;
+  
+    
+  }
 }
