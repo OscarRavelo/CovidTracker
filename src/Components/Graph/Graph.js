@@ -1,5 +1,5 @@
 import React from "react";
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from "recharts";
 import useFetch from "../../Hooks/useFetch";
 import Loader from '../Loading/Loading';
 
@@ -24,10 +24,12 @@ const Graph = () => {
   return (
     <div className="graph-container">
       {isFetching ? (
-        <div >
+        <ResponsiveContainer minHeight={300}  >
+
+        
 
         <BarChart
-        width={1200}
+        width={800}
         height={300}
         data={dataGrap()}
         margin={{
@@ -44,8 +46,9 @@ const Graph = () => {
         <Bar yAxisId="left" dataKey="recovered" fill="#8884d8" />
         <Bar yAxisId="right" dataKey="confirmed" fill="#82ca9d" />
       </BarChart>
+      
         
-        </div>
+        </ResponsiveContainer>
       ) : (
         <Loader />
       )}

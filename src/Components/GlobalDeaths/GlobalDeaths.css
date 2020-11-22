@@ -30,3 +30,32 @@
 .recovered strong {
     color: darkgreen;
 }
+.red {
+    background-color:darkred;
+    background:linear-gradient(to bottom, darkred 5%, darkred 100%);
+}
+.green {
+    background-color:darkgreen;
+    background:linear-gradient(to bottom, darkgreen 5%, darkgreen 100%);
+}
+.myButton {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:5px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+   

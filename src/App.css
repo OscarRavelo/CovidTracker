@@ -75,7 +75,7 @@ background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, F
   
 }
 
-@media (min-width: 900px){
+@media (max-width: 1300px){
   .graph-container {
     grid-row: auto;
     grid-column: auto;
@@ -87,3 +87,24 @@ background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, F
     
   }
 }
+@media (max-width: 570px){
+   body header {
+    display: flex;
+    width: 100%;
+    font-size: 7px;
+    margin: 0 0 1rem 0;
+  }
+
+   .App-gridcontainer { 
+    display: grid;
+    width: 100vw;
+    gap: 1rem;
+    grid-template-columns: 100vw;
+   }
+   .map_grid_container {
+    grid-column: 1fr;
+  
+  }
+  
+}
+

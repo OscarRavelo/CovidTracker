@@ -30,7 +30,7 @@ const GlobalDeaths = () => {
       <div>
       </div>
     </div>
-          <button onClick={ () => setQuestion("deaths")}>Deaths</button> <button onClick={ () => setQuestion("recovered")}  >Recovered</button>
+          <button className="myButton red" onClick={ () => setQuestion("deaths")}>Deaths</button> <button className="myButton green"  onClick={ () => setQuestion("recovered")}  >Recovered</button>
     </div>
     
   );
